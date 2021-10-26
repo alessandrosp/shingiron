@@ -3,6 +3,8 @@ name: Lina Stores
 japanese: リナストアズ 表参道
 area: Kita-Aoyama
 city: Tokyo
+instagram: linastoresjp
+gmaps: lina+stores+omotesando
 tags:
   - Italian
   - Groceries
