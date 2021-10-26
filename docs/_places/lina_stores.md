@@ -9,7 +9,7 @@ tags:
 reviews:
   - author: Alessandro
     content: >
-      Strong of its experience in London, Lina Stores just opened its first restaurant outside of the UK. Unfortunately, while the attire is as pretty as its English counterpart, the food is lackluster in both taste and presentation. A feast for the eyes, not so much for the mouth.
+      Strong of its experience in London, Lina Stores just opened its first restaurant outside of the UK. Unfortunately, while the venue is as pretty as its English counterpart, the food is lackluster in both taste and presentation. A feast for the eyes, not so much for the mouth.
     verdict: 2
   - author: Lorenzo
     content: >
