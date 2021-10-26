@@ -5,7 +5,10 @@ layout: default
 <div class="row">
 	<div class="col-12">
     {% for place in site.places %}
-      {{ place.name }} | {{ place.area }}, {{ place.city }}
+      {{ place.name }} | {{ place.area }}, {{ place.city }}<br>
+      {% for review in place.reviews %}
+        {{ review.author }}: {{ review.content }}<br>
+      {% endfor %}
 		{% endfor %}
 	</div>
 </div>
