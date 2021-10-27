@@ -14,7 +14,8 @@ layout: default
           <div class="row">
             <div class="col">
               {% for tag in place.tags %}
-                <span class="place-tag badge rounded-pill bg-primary">{{ tag }}</span>
+                {% assign this_tag = site.tags | where: "name", {{ tag }} | first %}
+                <span class="place-tag badge rounded-pill bg-primary">{{ this_tag.name }} {{ this_tag.emoji }}</span>
               {% endfor %}
             </div>
           </div>
