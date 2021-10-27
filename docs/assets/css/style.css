@@ -3,15 +3,15 @@ img {
   max-width: 100%;
 }
 
-.place-score {
+.place-score-ring {
   border-radius: 50%;
   width: 50px;
   height: 50px;
 }
 
-.place-score-col-yellow {
+.place-score-ring-yellow {
   background-color: white;
-  border: 2px solid #ffc107;
+  border: 10px solid #ffc107;
 }
 
 .place-score-core {
