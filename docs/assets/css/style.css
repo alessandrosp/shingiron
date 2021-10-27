@@ -2,3 +2,13 @@ img {
   max-height: 100%;
   max-width: 100%;
 }
+
+.place-score {}
+
+.place-score-col-yellow {
+  background-color: #ffc107;
+}
+
+.place-score-core {}
+
+.place-score-tagline {}
