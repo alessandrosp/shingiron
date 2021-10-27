@@ -3,12 +3,36 @@ title: Home
 layout: default
 ---
 <div class="row">
-  <div class="col-12">
+  <!-- The left-most panel with all the reviews. -->
+  <div class="col-10">
     {% for place in site.places %}
-      {{ place.name }} | {{ place.area }}, {{ place.city }}<br>
-        {% for review in place.reviews %}
-          {{ review.author }}: {{ review.content }}<br>
-        {% endfor %}
+      <!-- This row is for the whole Place. -->
+      <div class="row">
+        <!-- This col is left-most section of the Place-card, it
+        contains the most essential information about the Place. -->
+        <div class="col-9">
+          <div class="row">
+            <div class="col">
+              Tags: {{ place.tags }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              {{ place.name }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              {{ place.area }}, {{ place.city }}
+            </div>
+          </div>
+        </div>
+      </div>
     {% endfor %}
+  </div>
+  <!-- The right-most panel with the About Us section. -->
+  <div class="col-2">
+    <h2>Shingiron</h2>
+    <p>A review blog for anything Japan-related. Currently working in progress.</p>
   </div>
 </div>
