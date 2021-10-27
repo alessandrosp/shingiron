@@ -13,7 +13,9 @@ layout: default
         <div class="col-9">
           <div class="row">
             <div class="col">
-              Tags: {{ place.tags }}
+              {% for tag in place.tags %}
+                <span class="place-tag badge rounded-pill bg-primar">{{ tag }}</span>
+              {% endfor %}
             </div>
           </div>
           <div class="row">
@@ -26,6 +28,12 @@ layout: default
               {{ place.area }}, {{ place.city }}
             </div>
           </div>
+        </div>
+        <div class="col-1">
+          4
+        </div>
+        <div class="col-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Flickr_-_cyclonebill_-_Ravioli_med_skinke_og_asparges_i_mascarponecreme.jpg">
         </div>
       </div>
     {% endfor %}
