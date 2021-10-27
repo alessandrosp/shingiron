@@ -5,7 +5,7 @@ area: Kita-Aoyama
 city: Tokyo
 instagram: linastoresjp
 gmaps: lina+stores+omotesando
-tags:
+labels:
   - Italian
   - Groceries
 reviews:
