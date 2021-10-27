@@ -3,6 +3,10 @@ img {
   max-width: 100%;
 }
 
+.place-score {
+  border-left: 1px solid #e6e6e6;
+}
+
 .place-score-ring {
   border-radius: 50%;
   width: 50px;
@@ -18,4 +22,6 @@ img {
   text-align: center;
 }
 
-.place-score-tagline {}
+.place-score-tagline {
+  text-align: center;
+}
