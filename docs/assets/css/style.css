@@ -3,7 +3,9 @@ img {
   max-width: 100%;
 }
 
-.place-score {}
+.place-score {
+  border-radius: 50%;
+}
 
 .place-score-col-yellow {
   background-color: #ffc107;
