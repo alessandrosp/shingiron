@@ -14,7 +14,8 @@ img {
 }
 
 .place-score-col-yellow {
-  background-color: #ffc107;
+  background-color: white;
+  border: 2px solid #ffc107;
 }
 
 .place-score-core {}
