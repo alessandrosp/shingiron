@@ -10,6 +10,7 @@ img {
 
 .place-review {
   background-color: red;
+  font-size: 95%;
   height: 256px;
   -ms-flex: 0 0 256px;
       flex: 0 0 256px;
