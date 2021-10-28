@@ -4,14 +4,14 @@ img {
 }
 
 .place {
-  height: 125px;
+  height: 250px;
   background-color: greenyellow;
 }
 
 .place-review {
-  height: 125px;
-  -ms-flex: 0 0 230px;
-      flex: 0 0 230px;
+  height: 250px;
+  -ms-flex: 0 0 250px;
+      flex: 0 0 250px;
   background-color: red;
 }
 
