@@ -15,6 +15,9 @@ img {
   -ms-flex: 0 0 256px;
       flex: 0 0 256px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 .place-review:before {
