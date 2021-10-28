@@ -35,6 +35,11 @@ layout: default
               <img class="place-icon" src="https://img.icons8.com/color/48/000000/instagram-new.png"/> <a href="https://www.instagram.com/{{ place.instagram }}" target="_blank">{{ place.instagram }}@</a>
             </div>
           </div>
+          <div class="row">
+            <div class="col">
+              <img class="place-icon" src="https://img.icons8.com/color/48/000000/address--v1.png"/> <a href="https://www.google.com/maps?q={{ place.gmaps }}" target="_blank">Google Maps</a>
+            </div>
+          </div>
         </div>
         {% for review in place.reviews %}
           <div class="col d-none d-lg-block place-review">
