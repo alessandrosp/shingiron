@@ -3,6 +3,10 @@ img {
   max-width: 100%;
 }
 
+.place {
+  height: 125px;
+}
+
 /* Deprecated. */
 .place-score {
   border-left: 1px solid #e6e6e6;
