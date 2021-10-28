@@ -30,6 +30,11 @@ layout: default
               <img class="place-icon" src="https://img.icons8.com/color/48/000000/place-marker.png"/> {{ place.area }}, {{ place.city }}
             </div>
           </div>
+          <div class="row">
+            <div class="col">
+              <img class="place-icon" src="https://img.icons8.com/color/48/000000/instagram-new.png"/> <a href="https://www.instagram.com/{{ place.instagram }}">{{ place.instagram }}@</a>
+            </div>
+          </div>
         </div>
         {% for review in place.reviews %}
           <div class="col d-none d-lg-block place-review">
