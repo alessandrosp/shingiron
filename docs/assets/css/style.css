@@ -6,7 +6,6 @@ img {
 .place {
   background-color: greenyellow;
   height: 256px;
-  position: relative;
 }
 
 .place-review {
@@ -14,6 +13,7 @@ img {
   height: 256px;
   -ms-flex: 0 0 256px;
       flex: 0 0 256px;
+  position: relative;
 }
 
 .place-review:before {
