@@ -33,7 +33,7 @@ layout: default
         </div>
         {% for review in place.reviews %}
           <div class="col d-none d-lg-block place-review">
-            <p>{{ review.content }}</p>
+            <p><b>{{ review.author }}</b>: {{ review.content }}</p>
           </div>
         {% endfor %}
       </div>
