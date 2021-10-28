@@ -18,6 +18,7 @@ img {
   display: flex;
   justify-content: center;
   margin: auto;
+  align-items: center;
 }
 
 .place-review:before {
