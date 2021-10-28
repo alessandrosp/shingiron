@@ -31,12 +31,11 @@ layout: default
             </div>
           </div>
         </div>
-        <div class="col d-none d-lg-block place-review">
-          <p>Otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters otters</p>
-        </div>
-        <div class="col d-none d-lg-block place-review">
-          <p>idafhd lsa kjfhaskjf hsdkfj hdsfkl jdashfjk dshfds fdsf dsf dsf dsa f sadf dsf . sadf dsf sdf sdf sdf ds .</p>
-        </div>
+        {% for review in place.reviews %}
+          <div class="col d-none d-lg-block place-review">
+            <p>{{ review.content }}</p>
+          </div>
+        {% endfor %}
       </div>
     {% endfor %}
   </div>
