@@ -5,13 +5,13 @@ layout: default
 <div class="row">
   <!-- The left-most panel with all the reviews. Note that on mobile only
   this panel is visile as the right-most panel is hidden. -->
-  <div class="col-12 col-lg-8">
+  <div class="col-12 col-lg-10">
     {% for place in site.places %}
       <!-- This row is for the whole Place. -->
       <div class="row">
         <!-- This col is left-most section of the Place-card, it
         contains the most essential information about the Place. -->
-        <div class="col-9 col-lg-9">
+        <div class="col-12 col-lg-6">
           <div class="row">
             <div class="col">
               {% for label in place.labels %}
@@ -27,11 +27,11 @@ layout: default
           </div>
           <div class="row">
             <div class="col">
-              {{ place.area }}, {{ place.city }}
+              📍 {{ place.area }}, {{ place.city }}
             </div>
           </div>
         </div>
-        <div class="col-3 col-lg-1">
+        <div class="col-lg-3 d-none d-lg-block">
           <div class="place-score">
             <div class="place-score-ring place-score-ring-yellow">
               <div class="place-score-ring-core">4</div>
@@ -39,14 +39,19 @@ layout: default
             <div class="place-score-tagline"><i>Mixed</i></div>
           </div>
         </div>
-        <div class="col-lg-2 d-none d-lg-block">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Flickr_-_cyclonebill_-_Ravioli_med_skinke_og_asparges_i_mascarponecreme.jpg">
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="place-score">
+            <div class="place-score-ring place-score-ring-yellow">
+              <div class="place-score-ring-core">4</div>
+            </div>
+            <div class="place-score-tagline"><i>Mixed</i></div>
+          </div>
         </div>
       </div>
     {% endfor %}
   </div>
   <!-- The right-most panel with the About Us section. -->
-  <div class="col-4 d-none d-lg-block">
+  <div class="col-2 d-none d-lg-block">
     <h1 class="display-2">Shingiron</h1>
     <p>A review blog for anything Japan-related. Currently working in progress.</p>
   </div>
