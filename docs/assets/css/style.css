@@ -3,10 +3,12 @@ img {
   max-width: 100%;
 }
 
+/* Deprecated. */
 .place-score {
   border-left: 1px solid #e6e6e6;
 }
 
+/* Deprecated. */
 .place-score-ring {
   align-items: center;
   border-radius: 50%;
@@ -17,15 +19,18 @@ img {
   margin: auto;
 }
 
+/* Deprecated. */
 .place-score-ring-yellow {
   background-color: white;
   border: 6px solid #ffc107;
 }
 
+/* Deprecated. */
 .place-score-ring-core {
   text-align: center;
 }
 
+/* Deprecated. */
 .place-score-tagline {
   text-align: center;
 }
