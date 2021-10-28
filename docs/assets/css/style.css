@@ -5,9 +5,14 @@ img {
 
 .place {
   height: 125px;
-  -ms-flex: 0 0 125px;
-      flex: 0 0 125px;
   background-color: greenyellow;
+}
+
+.place-review {
+  height: 125px;
+  -ms-flex: 0 0 230px;
+      flex: 0 0 230px;
+  background-color: red;
 }
 
 /* Deprecated. */
