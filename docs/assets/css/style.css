@@ -8,6 +8,10 @@ img {
   height: 256px;
 }
 
+.place-icon {
+  width: 24px; 
+}
+
 .place-review {
   background-color: red;
   font-size: 95%;
