@@ -3,7 +3,7 @@ name: La Tappa Fissa
 japanese:
 area: Motomachi
 city: Yokohama
-instagram:
+instagram: latappafissa_motomachi
 gmaps: la+tappa+fissa+yokohama
 labels:
   - Italian
