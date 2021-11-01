@@ -46,9 +46,11 @@ layout: default
           {% endif %}
         </div>
         {% for review in place.reviews %}
-          <div class="col d-none d-lg-block place-review">
-            <p><b>{{ review.author }}</b>: {{ review.content }}</p>
-          </div>
+          {% if review.content %}
+            <div class="col d-none d-lg-block place-review">
+              <p><b>{{ review.author }}</b>: {{ review.content }}</p>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     {% endfor %}
