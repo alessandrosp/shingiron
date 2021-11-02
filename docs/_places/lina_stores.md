@@ -5,6 +5,7 @@ area: Kita-Aoyama
 city: Tokyo
 instagram: linastoresjp
 gmaps: lina+stores+omotesando
+pluscode:
 created: 2021-10-26
 labels:
   - Italian
