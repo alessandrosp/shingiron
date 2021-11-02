@@ -46,7 +46,7 @@ layout: default
           {% endif %}
         </div>
         {% for review in place.reviews %}
-          {% if review.content %}
+          {% if review.content and review.content != blank %}
             <div class="col d-none d-lg-block place-review">
               <figure>
                 <blockquote class="blockquote">
