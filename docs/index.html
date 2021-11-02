@@ -6,7 +6,8 @@ layout: default
   <!-- The left-most panel with all the reviews. Note that on mobile only
   this panel is visile as the right-most panel is hidden. -->
   <div class="col-12 col-lg-10">
-    {% for place in site.places %}
+    {% assign sorted_places = site.places | sort:"created" %}
+    {% for place in sorted_places %}
       <!-- This row is for the whole Place. -->
       <div class="row place">
         <!-- This col is left-most section of the Place-card, it
