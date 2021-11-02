@@ -61,7 +61,7 @@ layout: default
       {% for review in place.reviews %}
         {% if review.content and review.content != blank %}
           <div class="row place-footer-mobile">
-            <div class="col place-review-mobile">
+            <div class="col place-review-mobile {% if review.verdict == 4 %} place-review-mobile-4 {% elsif review.verdict == 3 %}  place-review-mobile-3 {% endif %}">
               <figure>
                 <blockquote class="blockquote">
                   <p>{{ review.content }}</p>
