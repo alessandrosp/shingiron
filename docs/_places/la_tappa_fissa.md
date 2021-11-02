@@ -9,8 +9,7 @@ labels:
   - Italian
 reviews:
   - author: Alessandro
-    content: >
-      
+    content:
     verdict: 4
   - author: Lorenzo
     content: >
