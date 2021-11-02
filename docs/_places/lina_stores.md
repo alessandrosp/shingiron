@@ -1,5 +1,5 @@
 ---
-name: Lina Stores
+name: Lina Stores xtr
 japanese: リナストアズ 表参道
 area: Kita-Aoyama
 city: Tokyo
