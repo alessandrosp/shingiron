@@ -47,7 +47,21 @@ layout: default
         </div>
         {% for review in place.reviews %}
           {% if review.content and review.content != blank %}
-            <div class="col d-none d-lg-block place-review">
+            <div class="col place-review">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>{{ review.content }}</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">{{ review.author }}</figcaption>
+              </figure>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="row place-footer-mobile">
+        {% for review in place.reviews %}
+          {% if review.content and review.content != blank %}
+            <div class="col place-review">
               <figure>
                 <blockquote class="blockquote">
                   <p>{{ review.content }}</p>
