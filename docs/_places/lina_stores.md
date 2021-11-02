@@ -13,9 +13,11 @@ reviews:
   - author: Alessandro
     content: >
       Strong of its experience in London, Lina Stores just opened its first restaurant outside of the UK. Unfortunately, while the venue is as pretty as its English counterpart, the food is lackluster in both taste and presentation. A feast for the eyes, not so much for the mouth.
+    when: 2021-10-26
     verdict: 2
   - author: Lorenzo
     content: >
       Favourite London deli recently opened a deli/restaurant in Omotesando. A decrescendo: beautiful location, strong vibe, good Prosecco, decent pasta, average focaccia, forgettable tiramisu. First time food tasted better in the UK than in Japan.
+    when: 2021-10-26
     verdict: 2
 ---
