@@ -11,6 +11,13 @@ img {
   height: 256px;
 }
 
+/* MOBILE */
+@media only screen and (max-width: 992px) {
+  .place {
+    height: 192px;
+  }
+}
+
 .place-icon {
   width: 24px; 
 }
