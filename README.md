@@ -10,6 +10,7 @@ area:
 city: 
 instagram: 
 gmaps: 
+pluscode: 
 labels:
   - 
 reviews:
