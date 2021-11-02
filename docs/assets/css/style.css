@@ -26,6 +26,12 @@ img {
   text-align: center;
 }
 
+@media only screen and (max-width: 992px) {
+  .place-review {
+    display: none;
+  }
+}
+
 .sidebar {
   background-color: cyan;
 }
