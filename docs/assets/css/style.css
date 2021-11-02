@@ -28,9 +28,32 @@ img {
   text-align: left !important;
 }
 
+/* MOBILE */
 @media only screen and (max-width: 992px) {
   .place-review {
     display: none !important;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 992px) {
+  .place-review-mobile {
+    display: none;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 992px) {
+  .place-review-mobile {
+    background-color: #f8f9fa;
+    font-size: 95%;
+    height: 256px;
+    -ms-flex: 0 0 256px;
+        flex: 0 0 256px;
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    text-align: left !important;
   }
 }
 
