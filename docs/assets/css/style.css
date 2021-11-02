@@ -8,7 +8,6 @@ img {
 }
 
 .place {
-  background-color: greenyellow;
   height: 256px;
 }
 
@@ -17,7 +16,6 @@ img {
 }
 
 .place-review {
-  background-color: red;
   font-size: 95%;
   height: 256px;
   -ms-flex: 0 0 256px;
@@ -37,7 +35,6 @@ img {
 }
 
 .sidebar {
-  background-color: cyan;
 }
 
 /* Deprecated. */
