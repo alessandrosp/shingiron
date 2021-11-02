@@ -48,7 +48,12 @@ layout: default
         {% for review in place.reviews %}
           {% if review.content %}
             <div class="col d-none d-lg-block place-review">
-              <p><b>{{ review.author }}</b>: {{ review.content }}</p>
+              <figure>
+                <blockquote class="blockquote">
+                  <p>{{ review.content }}</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">{{ review.author }}</figcaption>
+              </figure>
             </div>
           {% endif %}
         {% endfor %}
