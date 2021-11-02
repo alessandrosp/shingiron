@@ -6,6 +6,7 @@ city: Tokyo
 instagram: 
 gmaps: bar+orchard+ginza
 pluscode: MQC6+FV Chuo City, Tokyo, Japan
+created: 2021-11-02
 labels:
   - Cocktail Bar
   - Asia's 50 Best Bars 2021
