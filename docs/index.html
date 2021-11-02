@@ -69,7 +69,7 @@ layout: default
                 <blockquote class="blockquote">
                   <p>{{ review.content }}</p>
                 </blockquote>
-                <figcaption class="blockquote-footer">{{ review.author }}</figcaption>
+                <figcaption class="blockquote-footer">{{ review.author }}{% if review.when %} ({{ review.when }}){% endif %}</figcaption>
               </figure>
             </div>
           </div>
