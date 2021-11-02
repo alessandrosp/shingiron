@@ -5,6 +5,7 @@ area: Motomachi
 city: Yokohama
 instagram: latappafissa_motomachi
 gmaps: la+tappa+fissa+yokohama
+created: 2021-10-30
 labels:
   - Italian
 reviews:
