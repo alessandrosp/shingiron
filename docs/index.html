@@ -58,9 +58,9 @@ layout: default
           {% endif %}
         {% endfor %}
       </div>
-      <div class="row place-footer-mobile">
-        {% for review in place.reviews %}
-          {% if review.content and review.content != blank %}
+      {% for review in place.reviews %}
+        {% if review.content and review.content != blank %}
+          <div class="row place-footer-mobile">
             <div class="col place-review-mobile">
               <figure>
                 <blockquote class="blockquote">
@@ -69,9 +69,9 @@ layout: default
                 <figcaption class="blockquote-footer">{{ review.author }}</figcaption>
               </figure>
             </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+          </div>
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   </div>
   <!-- The right-most panel with the About Us section. -->
