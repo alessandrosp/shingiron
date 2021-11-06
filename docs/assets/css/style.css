@@ -26,6 +26,10 @@ img {
   width: 24px; 
 }
 
+.place-name {
+  padding-top: 8px; 
+}
+
 .place-review {
   height: 256px;
   -ms-flex: 0 0 256px;
