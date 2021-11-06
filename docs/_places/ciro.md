@@ -16,7 +16,6 @@ reviews:
     when: 2021-11-06
     verdict: 3
   - author: Lorenzo
-    content: Good Neapolitan-style margherita and marinara, at ¥1500 in total arguably the best value for money in Tokyo so far. (No members of the staff were killed for having a French fries pizza on the menu to write this review.)
+    content: 
     when: 2021-11-06
     verdict: 3
----
