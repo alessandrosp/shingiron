@@ -30,7 +30,7 @@ img {
   padding-top: 8px; 
 }
 
-.place-review {
+.deprecated {
   height: 256px;
   -ms-flex: 0 0 256px;
       flex: 0 0 256px;
@@ -44,41 +44,31 @@ img {
 
 /* MOBILE */
 @media only screen and (max-width: 992px) {
-  .place-review {
+  .deprecated {
     display: none !important;
   }
 }
 
-/* DESKTOP */
-@media only screen and (min-width: 992px) {
-  .place-review-mobile {
-    display: none;
-  }
+.place-review-content {
+  background-color: #f8f9fa;
+  margin: 0px 6px 12px 6px;
+  text-align: left !important;
 }
 
-/* MOBILE */
-@media only screen and (max-width: 992px) {
-  .place-review-mobile {
-    background-color: #f8f9fa;
-    margin: 0px 6px 12px 6px;
-    text-align: left !important;
-  }
-  
-  .place-review-mobile-4 {
-    border-left: #6f42c1 solid 6px;
-  }
-  
-  .place-review-mobile-3 {
-    border-left: #198754 solid 6px;
-  }
-  
-  .place-review-mobile-2 {
-    border-left: #fd7e14 solid 6px;
-  }
-  
-  .place-review-mobile-1 {
-    border-left: #dc3545 solid 6px;
-  }
+.place-review-content-4 {
+  border-left: #6f42c1 solid 6px;
+}
+
+.place-review-content-3 {
+  border-left: #198754 solid 6px;
+}
+
+.place-review-content-2 {
+  border-left: #fd7e14 solid 6px;
+}
+
+.place-review-content-1 {
+  border-left: #dc3545 solid 6px;
 }
 
 .sidebar {
