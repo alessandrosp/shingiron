@@ -46,25 +46,13 @@ layout: default
             </div>
           {% endif %}
         </div>
-        {% for review in place.reviews %}
-          {% if review.content and review.content != blank %}
-            <div class="col place-review">
-              <figure>
-                <blockquote class="blockquote">
-                  <p>{{ review.content }}</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">{{ review.author }}</figcaption>
-              </figure>
-            </div>
-          {% endif %}
-        {% endfor %}
       </div>
       {% for review in place.reviews %}
         {% if review.content and review.content != blank %}
-          <div class="row place-footer-mobile">
-            <div class="
-              col place-review-mobile {% if review.verdict == 4 %} place-review-mobile-4 {% elsif review.verdict == 3 %} place-review-mobile-3
-              {% elsif review.verdict == 2 %} place-review-mobile-2 {% elsif review.verdict == 1 %} place-review-mobile-1 {% endif %}">
+          <div class="row place-review"> place-footer-mobile
+            <div class=" place-review-mobile <<
+              col place-review-content {% if review.verdict == 4 %} place-review-content-4 {% elsif review.verdict == 3 %} place-review-content-3
+              {% elsif review.verdict == 2 %} place-review-content-2 {% elsif review.verdict == 1 %} place-review-content-1 {% endif %}">
               <figure>
                 <blockquote class="blockquote">
                   <p>{{ review.content }}</p>
