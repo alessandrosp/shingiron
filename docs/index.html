@@ -5,7 +5,7 @@ layout: default
 <div class="row">
   <!-- The left-most panel with all the reviews. Note that on mobile only
   this panel is visile as the right-most panel is hidden. -->
-  <div class="col-10 col-lg-10">
+  <div class="col-12 col-lg-8">
     {% assign sorted_places = site.places | sort: "created" | reverse %}
     {% for place in sorted_places %}
       <!-- This row is for the whole Place. -->
