@@ -14,8 +14,8 @@ reviews:
     content: 
     when: 
     verdict: 
-  - author: 
-    content: 
-    when: 
-    verdict: 
+  - author: Lorenzo
+    content: Claimed to be closed and was open. Claimed to have mixed nuts and did. Claimed to know how to make cocktails and didn’t.
+    when: 2011-11-06
+    verdict: 2
 ---
