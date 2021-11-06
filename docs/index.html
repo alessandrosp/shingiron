@@ -47,22 +47,24 @@ layout: default
           {% endif %}
         </div>
       </div>
-      {% for review in place.reviews %}
-        {% if review.content and review.content != blank %}
-          <div class="row place-review">
-            <div class="
-              col place-review-content {% if review.verdict == 4 %} place-review-content-4 {% elsif review.verdict == 3 %} place-review-content-3
-              {% elsif review.verdict == 2 %} place-review-content-2 {% elsif review.verdict == 1 %} place-review-content-1 {% endif %}">
-              <figure>
-                <blockquote class="blockquote place-review-blockquote">
-                  <p>{{ review.content }}</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">{{ review.author }}{% if review.when %} ({{ review.when }}){% endif %}</figcaption>
-              </figure>
+      <div class="place-reviews">
+        {% for review in place.reviews %}
+          {% if review.content and review.content != blank %}
+            <div class="row place-review">
+              <div class="
+                col place-review-content {% if review.verdict == 4 %} place-review-content-4 {% elsif review.verdict == 3 %} place-review-content-3
+                {% elsif review.verdict == 2 %} place-review-content-2 {% elsif review.verdict == 1 %} place-review-content-1 {% endif %}">
+                <figure>
+                  <blockquote class="blockquote place-review-blockquote">
+                    <p>{{ review.content }}</p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer">{{ review.author }}{% if review.when %} ({{ review.when }}){% endif %}</figcaption>
+                </figure>
+              </div>
             </div>
-          </div>
-        {% endif %}
-      {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
     {% endfor %}
   </div>
   <!-- The right-most panel with the About Us section. -->
