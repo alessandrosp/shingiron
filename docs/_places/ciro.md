@@ -12,7 +12,7 @@ labels:
   - Italian
 reviews:
   - author: Alessandro
-    content: "Outside of Italy, pizza can be broadly categorised as stuff that you should be arrested for, incredible for having been prepared abroad and okay. This pizza was okay."
+    content: "Outside of Italy, pizza can be broadly categorised as: stuff that you should be arrested for, incredible for having been prepared abroad and okay. This pizza was okay."
     when: 2021-11-06
     verdict: 3
   - author: Lorenzo
