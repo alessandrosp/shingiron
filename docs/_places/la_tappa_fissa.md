@@ -15,11 +15,9 @@ reviews:
     when: 2021-10-30
     verdict: 4
   - author: Lorenzo
-    content: >
+    content: |
       I was born in Rome.
-  
       Every time I come eat here,
-  
       I feel like I’m home.
     when: 2021-10-30
     verdict: 4
