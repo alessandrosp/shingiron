@@ -16,7 +16,7 @@ reviews:
     verdict: 4
   - author: Lorenzo
     content: >
-      I am from Rome. When I eat here, I’m home.
+      I am from Rome.\nWhen I eat here, I’m home.
     when: 2021-10-30
     verdict: 4
 ---
