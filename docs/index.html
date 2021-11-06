@@ -49,8 +49,8 @@ layout: default
       </div>
       {% for review in place.reviews %}
         {% if review.content and review.content != blank %}
-          <div class="row place-review"> place-footer-mobile
-            <div class=" place-review-mobile <<
+          <div class="row place-review">
+            <div class="
               col place-review-content {% if review.verdict == 4 %} place-review-content-4 {% elsif review.verdict == 3 %} place-review-content-3
               {% elsif review.verdict == 2 %} place-review-content-2 {% elsif review.verdict == 1 %} place-review-content-1 {% endif %}">
               <figure>
