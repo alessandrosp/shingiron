@@ -11,7 +11,7 @@ labels:
   - Cocktail Bar
 reviews:
   - author: Alessandro
-    content: Music: very good. Interior design: good. Service: average. Drinks: bad. The fact you can still smoke inside: very bad. Uninspired and thus uninspiring, this bar is as meh as any place can get.
+    content: "Music: very good. Interior design: good. Service: average. Drinks: bad. The fact you can still smoke inside: very bad. Uninspired and thus uninspiring, this bar is as meh as any place can get."
     when: 2021-11-06
     verdict: 2
   - author: Lorenzo
