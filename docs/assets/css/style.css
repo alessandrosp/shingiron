@@ -2,6 +2,10 @@
   font-size: 0.99rem; 
 }
 
+container {
+  max-width: 1024px;
+}
+
 img {
   max-height: 100%;
   max-width: 100%;
