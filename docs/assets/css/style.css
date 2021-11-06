@@ -29,20 +29,24 @@ img {
   text-align: left !important;
 }
 
-.place-review-content-4 {
-  border-left: #6f42c1 solid 6px;
-}
-
-.place-review-content-3 {
-  border-left: #198754 solid 6px;
+.place-review-content-1 {
+  border-left: #dc3545 solid 6px;
 }
 
 .place-review-content-2 {
   border-left: #fd7e14 solid 6px;
 }
 
-.place-review-content-1 {
-  border-left: #dc3545 solid 6px;
+.place-review-content-3 {
+  border-left: #198754 solid 6px;
+}
+
+.place-review-content-4 {
+  border-left: #6f42c1 solid 6px;
+}
+
+.place-review-blockquote {
+  padding-top: 8px;
 }
 
 .sidebar {
