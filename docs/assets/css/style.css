@@ -11,6 +11,10 @@ img {
   max-width: 100%;
 }
 
+.navbar {
+  bottom-margin: 12px; 
+}
+
 .place {
   height: 160px;
 }
