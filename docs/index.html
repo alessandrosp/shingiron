@@ -2,74 +2,63 @@
 title: Home
 layout: default
 ---
-<div class="row">
-  <!-- The left-most panel with all the reviews. Note that on mobile only
-  this panel is visile as the right-most panel is hidden. -->
-  <div class="col-12 col-lg-8">
-    {% assign sorted_places = site.places | sort: "created" | reverse %}
-    {% for place in sorted_places %}
-      <!-- This row is for the whole Place. -->
-      <div class="row place">
-        <!-- This col is left-most section of the Place-card, it
-        contains the most essential information about the Place. -->
+{% assign sorted_places = site.places | sort: "created" | reverse %}
+{% for place in sorted_places %}
+  <!-- This row is for the whole Place. -->
+  <div class="row place">
+    <!-- This col is left-most section of the Place-card, it
+    contains the most essential information about the Place. -->
+    <div class="col">
+      <div class="row">
         <div class="col">
-          <div class="row">
-            <div class="col">
-              {% for label in place.labels %}
-                {% assign tag = site.tags | where: "name", label | first %}
-                <span class="place-tag badge rounded-pill bg-primary">{{ tag.name }} {{ tag.emoji }}</span>
-              {% endfor %}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <h3 class="place-name">{{ place.name }}</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <img class="place-icon" src="https://img.icons8.com/color/48/000000/home.png"/> {{ place.area }}, {{ place.city }}
-            </div>
-          </div>
-          {% if place.instagram %}
-            <div class="row">
-              <div class="col">
-                <img class="place-icon" src="https://img.icons8.com/color/48/000000/instagram-new.png"/> <a href="https://www.instagram.com/{{ place.instagram }}" target="_blank">@{{ place.instagram }}</a>
-              </div>
-            </div>
-          {% endif %}
-          {% if place.gmaps %}
-            <div class="row">
-              <div class="col">
-                <img class="place-icon" src="https://img.icons8.com/color/48/000000/google-maps-new.png"/> <a href="https://www.google.com/maps?q={{ place.gmaps }}" target="_blank">Google Maps</a>
-              </div>
-            </div>
-          {% endif %}
+          {% for label in place.labels %}
+            {% assign tag = site.tags | where: "name", label | first %}
+            <span class="place-tag badge rounded-pill bg-primary">{{ tag.name }} {{ tag.emoji }}</span>
+          {% endfor %}
         </div>
       </div>
-      <div class="place-reviews">
-        {% for review in place.reviews %}
-          {% if review.content and review.content != blank %}
-            <div class="row place-review">
-              <div class="
-                col place-review-content {% if review.verdict == 4 %} place-review-content-4 {% elsif review.verdict == 3 %} place-review-content-3
-                {% elsif review.verdict == 2 %} place-review-content-2 {% elsif review.verdict == 1 %} place-review-content-1 {% endif %}">
-                <figure>
-                  <blockquote class="blockquote place-review-blockquote">
-                    <p>{{ review.content }}</p>
-                  </blockquote>
-                  <figcaption class="blockquote-footer">{{ review.author }}{% if review.when %} ({{ review.when }}){% endif %}</figcaption>
-                </figure>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
+      <div class="row">
+        <div class="col">
+          <h3 class="place-name">{{ place.name }}</h3>
+        </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <img class="place-icon" src="https://img.icons8.com/color/48/000000/home.png"/> {{ place.area }}, {{ place.city }}
+        </div>
+      </div>
+      {% if place.instagram %}
+        <div class="row">
+          <div class="col">
+            <img class="place-icon" src="https://img.icons8.com/color/48/000000/instagram-new.png"/> <a href="https://www.instagram.com/{{ place.instagram }}" target="_blank">@{{ place.instagram }}</a>
+          </div>
+        </div>
+      {% endif %}
+      {% if place.gmaps %}
+        <div class="row">
+          <div class="col">
+            <img class="place-icon" src="https://img.icons8.com/color/48/000000/google-maps-new.png"/> <a href="https://www.google.com/maps?q={{ place.gmaps }}" target="_blank">Google Maps</a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="place-reviews">
+    {% for review in place.reviews %}
+      {% if review.content and review.content != blank %}
+        <div class="row place-review">
+          <div class="
+            col place-review-content {% if review.verdict == 4 %} place-review-content-4 {% elsif review.verdict == 3 %} place-review-content-3
+            {% elsif review.verdict == 2 %} place-review-content-2 {% elsif review.verdict == 1 %} place-review-content-1 {% endif %}">
+            <figure>
+              <blockquote class="blockquote place-review-blockquote">
+                <p>{{ review.content }}</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">{{ review.author }}{% if review.when %} ({{ review.when }}){% endif %}</figcaption>
+            </figure>
+          </div>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
-  <!-- The right-most panel with the About Us section. -->
-  <div class="col-4 d-none d-lg-block sidebar">
-    <h1>Shingiron</h1>
-    <p>We review every sort of places in Japan, from parks to cocktails bars. Reviews are all 280 characters of less.</p>
-  </div>
-</div>
+{% endfor %}
