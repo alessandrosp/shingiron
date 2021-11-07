@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /about/
+permalink: /map/
 ---
 <b>Test</>
 <br>
