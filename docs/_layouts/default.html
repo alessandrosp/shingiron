@@ -1,4 +1,15 @@
 ---
 layout: core
 ---
-{{ content }}
+<div class="row">
+  <!-- The left-most panel with the main content. Note that on mobile only
+  this panel is visile as the right-most panel is hidden. -->
+  <div class="col-12 col-lg-8">
+    {{ content }}
+  </div>
+  <!-- The right-most panel (sidebar). -->
+  <div class="col-4 d-none d-lg-block sidebar">
+    <h1>Shingiron</h1>
+    <p>We review every sort of places in Japan, from parks to cocktails bars. Reviews are all 280 characters of less.</p>
+  </div>
+</div>
