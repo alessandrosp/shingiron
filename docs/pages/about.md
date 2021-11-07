@@ -2,4 +2,5 @@
 layout: default
 permalink: /about/
 ---
-Test
+# About Us
+All your base are **belong** to us.
