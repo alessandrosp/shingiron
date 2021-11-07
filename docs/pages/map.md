@@ -2,7 +2,7 @@
 layout: default
 permalink: /map/
 ---
-<b>Test</>
+<b>Test</b>
 <br>
 <iframe
   width="600"
