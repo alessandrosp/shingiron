@@ -1,3 +1,6 @@
+---
+layout: blank
+---
 let map;
 
 function initMap() {
