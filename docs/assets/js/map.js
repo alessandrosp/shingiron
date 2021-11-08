@@ -3,7 +3,7 @@ layout: blank
 ---
 {% assign foo = "info-i_maps.png" %}
 
-fetch("https://world.openfoodfacts.org/category/pastas/1.json").then(response => {
+fetch("https://plus.codes/api?address=JJHV+XJ Setagaya City, Tokyo, Japan&key=AIzaSyDx3pE_t6DwHcdC8Hdga0dTSHWNeqPA5cI").then(response => {
     // indicates whether the response is successful (status code 200-299) or not
     if (!response.ok) {
       throw new Error(`Request failed with status ${reponse.status}`)
