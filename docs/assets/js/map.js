@@ -1,6 +1,7 @@
 ---
 layout: blank
 ---
+{% assign foo = "info-i_maps.png" %}
 let map;
 
 function initMap() {
@@ -13,10 +14,10 @@ function initMap() {
     "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
   const icons = {
     parking: {
-      icon: iconBase + "parking_lot_maps.png",
+      icon: iconBase + {{ foo }},
     },
     library: {
-      icon: iconBase + "library_maps.png",
+      icon: iconBase + {{ foo }},
     },
     info: {
       icon: iconBase + "info-i_maps.png",
