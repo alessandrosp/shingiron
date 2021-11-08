@@ -14,10 +14,10 @@ function initMap() {
     "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
   const icons = {
     parking: {
-      icon: iconBase + {{ foo }},
+      icon: iconBase + "{{ foo }}",
     },
     library: {
-      icon: iconBase + {{ foo }},
+      icon: iconBase + "{{ foo }}",
     },
     info: {
       icon: iconBase + "info-i_maps.png",
