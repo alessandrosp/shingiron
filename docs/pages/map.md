@@ -14,7 +14,8 @@ permalink: /map/
     &q=Space+Needle,Seattle+WA">
 </iframe>
 <br>
-    <div id="map"></div>
+<div id="map"></div>
+<span>Ciao!</span>
 
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx3pE_t6DwHcdC8Hdga0dTSHWNeqPA5cI&callback=initMap&v=weekly" async></script>
