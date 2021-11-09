@@ -10,11 +10,15 @@ function initMap() {
     center: new google.maps.LatLng(35.69375, 139.75375),
     zoom: 12,
   });
+  
+  async function getGeoInfo(pluscode) {
+    return await fetch(url.replace("${pluscode}", pluscode)).then(response => {return response.json()})
+  }
 
   let places = []
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
-      let geoinfo = await fetch(url.replace("${pluscode}", "{{ place.pluscode }}")).then(response => {return response.json()})
+      let geoinfo = getGeoInfo("{{ place.pluscode }}");
       let lat = geoinfo[0].plus_code.geometry.location.lat;
       let lng = geoinfo[0].plus_code.geometry.location.lng;
       places.push(
