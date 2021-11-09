@@ -11,10 +11,18 @@ function initMap() {
     zoom: 12,
   });
   
-  async function getCoordinates(pluscode) {
+  async function fetchCoordinates(pluscode) {
     let response = await fetch(url.replace("${pluscode}", pluscode));
-    let geoinfo = await response.json();
-    return [35.6937, 139.75375]
+    return await response.json();
+  }
+  
+  function getCoordinates(pluscode) {
+    let a, b;
+    fetchCoordinates(pluscode).then(geoinfo => {
+      a = geoinfo.plus_code.geometry.location.lat;
+      b = geoinfo.plus_code.geometry.location.lng;
+    })
+    return [a, b]
   }
 
   let places = []
