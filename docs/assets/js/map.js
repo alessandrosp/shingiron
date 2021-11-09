@@ -12,7 +12,9 @@ function initMap() {
   });
   
   async function getGeoInfo(pluscode) {
-    return await fetch(url.replace("${pluscode}", pluscode))
+    let response = await fetch(url.replace("${pluscode}", pluscode))
+    console.log(response)
+    return response
   }
 
   let places = []
