@@ -17,12 +17,12 @@ function initMap() {
   }
   
   function getCoordinates(pluscode) {
-    let a, b;
+    let lat, lng;
     fetchCoordinates(pluscode).then(geoinfo => {
       a = geoinfo.plus_code.geometry.location.lat;
       b = geoinfo.plus_code.geometry.location.lng;
     })
-    return [a, b]
+    return [lat, lng]
   }
 
   let places = []
@@ -30,6 +30,7 @@ function initMap() {
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
       [lat, lng] = getCoordinates("{{ place.pluscode }}");
+      console.log(lat)
       places.push(
         {
           position: new google.maps.LatLng(lat, lng),
