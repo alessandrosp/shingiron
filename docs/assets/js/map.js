@@ -12,7 +12,8 @@ function initMap() {
   });
   
   async function fetchCoordinates(pluscode) {
-    let response = await fetch(url.replace("${pluscode}", pluscode));
+    let escapedPluscode = pluscode.replace("+", "%2B");
+    let response = await fetch(url.replace("${pluscode}", escapedPluscode));
     return await response.json();
   }
 
