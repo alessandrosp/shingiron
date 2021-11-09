@@ -1,21 +1,9 @@
 ---
 layout: blank
 ---
-{% assign foo = "info-i_maps.png" %}
-
-fetch("https://plus.codes/api?address=JJHV+XJ Setagaya City, Tokyo, Japan&key=AIzaSyDx3pE_t6DwHcdC8Hdga0dTSHWNeqPA5cI").then(response => {
-    // indicates whether the response is successful (status code 200-299) or not
-    if (!response.ok) {
-      throw new Error(`Request failed with status ${reponse.status}`)
-    }
-    return response.json()
-  })
-  .then(data => {
-    console.log(data)
-  })
-  .catch(error => console.log(error))
-
 let map;
+let icon = "https://developers.google.com/maps/documentation/javascript/examples/full/images/info-i_maps.png";
+let url = "https://plus.codes/api?address=${pluscode}&key=AIzaSyAsVncbPDu6sjkwL6pXhj1LN2GD6QtcgMY";
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -23,103 +11,29 @@ function initMap() {
     zoom: 16,
   });
 
-  const iconBase =
-    "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
-  const icons = {
-    parking: {
-      icon: iconBase + "{{ foo }}",
-    },
-    library: {
-      icon: iconBase + "{{ foo }}",
-    },
-    info: {
-      icon: iconBase + "info-i_maps.png",
-    },
-  };
-  const features = [
-    {
-      position: new google.maps.LatLng(-33.91721, 151.2263),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91539, 151.2282),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91747, 151.22912),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.9191, 151.22907),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91725, 151.23011),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91872, 151.23089),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91784, 151.23094),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91682, 151.23149),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.9179, 151.23463),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91666, 151.23468),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.916988, 151.23364),
-      type: "info",
-    },
-    {
-      position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
-      type: "library",
-    },
-  ];
+  let places = []
+  {% for place in site.places %}
+    {% if place.pluscode and place.pluscode != blank %}
+      fetch(url.replace("${pluscode}", {{ place.pluscode }}))
+        .then(response => {return response.json()})
+        .then(geoinfo => {
+          let lat = geoinfo[0].plus_code.geometry.location.lat;
+          let lng = geoinfo[0].plus_code.geometry.location.lng;
+          places.push(
+            {
+              position: new google.maps.LatLng(lat, lng),
+            }
+          )
+        }
+      )
+    {% endif %}
+  {% endfor %}
 
   // Create markers.
-  for (let i = 0; i < features.length; i++) {
+  for (let i = 0; i < places.length; i++) {
     const marker = new google.maps.Marker({
-      position: features[i].position,
-      icon: icons[features[i].type].icon,
+      position: places[i].position,
+      icon: icon,
       map: map,
     });
   }
