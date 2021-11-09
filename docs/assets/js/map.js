@@ -17,12 +17,12 @@ function initMap() {
   }
   
   function getCoordinates(pluscode) {
-    let lat, lng;
+    let x, y;
     fetchCoordinates(pluscode).then(geoinfo => {
-      a = geoinfo.plus_code.geometry.location.lat;
-      b = geoinfo.plus_code.geometry.location.lng;
+      x = geoinfo.plus_code.geometry.location.lat;
+      y = geoinfo.plus_code.geometry.location.lng;
     })
-    return [lat, lng]
+    return [x, y]
   }
 
   let places = []
