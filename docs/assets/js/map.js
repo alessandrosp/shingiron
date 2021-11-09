@@ -15,7 +15,7 @@ function initMap() {
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
       fetch(url.replace("${pluscode}", "{{ place.pluscode }}"))
-        .then(response => {return response.json()})
+        .then(response => await {return response.json()})
         .then(
           geoinfo => {
             let lat = geoinfo[0].plus_code.geometry.location.lat;
