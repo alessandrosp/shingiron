@@ -16,11 +16,14 @@ function initMap() {
   }
 
   let places = []
+  let geoinfo;
+  let lat;
+  let lng;
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
-      let geoinfo = getGeoInfo("{{ place.pluscode }}");
-      let lat = geoinfo[0].plus_code.geometry.location.lat;
-      let lng = geoinfo[0].plus_code.geometry.location.lng;
+      geoinfo = getGeoInfo("{{ place.pluscode }}");
+      lat = geoinfo[0].plus_code.geometry.location.lat;
+      lng = geoinfo[0].plus_code.geometry.location.lng;
       places.push(
         {
           position: new google.maps.LatLng(lat, lng),
