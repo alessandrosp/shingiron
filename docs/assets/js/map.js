@@ -8,7 +8,7 @@ let url = "https://plus.codes/api?address=${pluscode}&key=AIzaSyAsVncbPDu6sjkwL6
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: new google.maps.LatLng(35.69375, 139.75375),
-    zoom: 16,
+    zoom: 12,
   });
 
   let places = []
