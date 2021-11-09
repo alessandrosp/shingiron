@@ -29,3 +29,4 @@ function initMap() {
         })
     {% endif %}
   {% endfor %}
+}
