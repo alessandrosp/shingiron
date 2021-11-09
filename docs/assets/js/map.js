@@ -14,18 +14,19 @@ function initMap() {
   let places = []
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
-      fetch(url.replace("${pluscode}", {{ place.pluscode }}))
+      fetch(url.replace("${pluscode}", "{{ place.pluscode }}"))
         .then(response => {return response.json()})
-        .then(geoinfo => {
-          let lat = geoinfo[0].plus_code.geometry.location.lat;
-          let lng = geoinfo[0].plus_code.geometry.location.lng;
-          places.push(
-            {
-              position: new google.maps.LatLng(lat, lng),
-            }
-          )
-        }
-      )
+        .then(
+          geoinfo => {
+            let lat = geoinfo[0].plus_code.geometry.location.lat;
+            let lng = geoinfo[0].plus_code.geometry.location.lng;
+            places.push(
+              {
+                position: new google.maps.LatLng(lat, lng),
+              }
+            )
+          }
+        )
     {% endif %}
   {% endfor %}
 
