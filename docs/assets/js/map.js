@@ -18,7 +18,7 @@ function initMap() {
   
   function getCoordinates(pluscode) {
     let geoinfo;
-    fetchCoordinates(pluscode).then(info => {geoinfo = info})
+    fetchCoordinates(pluscode).then(info => {console.log(info)})
     return geoinfo
   }
 
