@@ -17,20 +17,17 @@ function initMap() {
   }
   
   function getCoordinates(pluscode) {
-    let x, y;
-    fetchCoordinates(pluscode).then(geoinfo => {
-      x = geoinfo.plus_code.geometry.location.lat;
-      y = geoinfo.plus_code.geometry.location.lng;
-    })
-    return [x, y]
+    let geoinfo;
+    fetchCoordinates(pluscode).then(info => {geoinfo = info})
+    return geoinfo
   }
 
   let places = []
   let lat, lng;
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
-      [lat, lng] = getCoordinates("{{ place.pluscode }}");
-      console.log(lat)
+      geoinfo = getCoordinates("{{ place.pluscode }}");
+      console.log(geoinfo)
       places.push(
         {
           position: new google.maps.LatLng(lat, lng),
