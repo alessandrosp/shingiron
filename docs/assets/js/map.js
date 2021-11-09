@@ -29,6 +29,7 @@ function initMap() {
   {% endfor %}
 
   // Create markers.
+  console.log(places)
   for (let i = 0; i < places.length; i++) {
     const marker = new google.maps.Marker({
       position: places[i].position,
