@@ -21,6 +21,7 @@ function initMap() {
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
       geoinfo = getGeoInfo("{{ place.pluscode }}");
+      console.log(geoinfo)
       lat = geoinfo.plus_code.geometry.location.lat;
       lng = geoinfo.plus_code.geometry.location.lng;
       places.push(
