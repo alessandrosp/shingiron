@@ -5,7 +5,7 @@ area: Motomachi
 city: Yokohama
 instagram: latappafissa_motomachi
 gmaps: la+tappa+fissa+yokohama
-pluscode: CJQW+QR 横浜市、神奈川県
+pluscode: CJQW+QR Yokohama, Kanagawa, Japan
 created: 2021-10-30
 labels:
   - Italian
