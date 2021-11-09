@@ -19,7 +19,7 @@ function initMap() {
   let geoinfo, lat, lng;
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
-      geoinfo = getGeoInfo("{{ place.pluscode }}");
+      geoinfo = getGeoInfo("{{ place.pluscode }}").then(geoinfo => {return geoinfo});
       lat = geoinfo[0].plus_code.geometry.location.lat;
       lng = geoinfo[0].plus_code.geometry.location.lng;
       places.push(
