@@ -21,22 +21,11 @@ function initMap() {
     {% if place.pluscode and place.pluscode != blank %}
       fetchCoordinates("{{ place.pluscode }}")
         .then(geoinfo => {
-          console.log(geoinfo)
-          console.log(geoinfo.plus_code.geometry.location.lat)
-          places.push(
-            {position: new google.maps.LatLng(geoinfo.plus_code.geometry.location.lat, geoinfo.plus_code.geometry.location.lng)}
-          )
+          const marker = new google.maps.Marker({
+            position: new google.maps.LatLng(geoinfo.plus_code.geometry.location.lat, geoinfo.plus_code.geometry.location.lng),
+            icon: icon,
+            map: map,
+          });
         })
     {% endif %}
   {% endfor %}
-
-  // Create markers.
-  console.log(places)
-  for (let i = 0; i < places.length; i++) {
-    const marker = new google.maps.Marker({
-      position: places[i].position,
-      icon: icon,
-      map: map,
-    });
-  }
-}
