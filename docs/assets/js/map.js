@@ -16,9 +16,7 @@ function initMap() {
   }
 
   let places = []
-  let geoinfo;
-  let lat;
-  let lng;
+  let geoinfo, lat, lng;
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
       geoinfo = getGeoInfo("{{ place.pluscode }}");
