@@ -15,24 +15,12 @@ function initMap() {
     let response = await fetch(url.replace("${pluscode}", pluscode));
     return await response.json();
   }
-  
-  function getCoordinates(pluscode) {
-    let geoinfo;
-    fetchCoordinates(pluscode).then(info => {window.test = info})
-    return geoinfo
-  }
 
   let places = []
-  let lat, lng;
   {% for place in site.places %}
     {% if place.pluscode and place.pluscode != blank %}
-      geoinfo = getCoordinates("{{ place.pluscode }}");
-      console.log(geoinfo)
-      places.push(
-        {
-          position: new google.maps.LatLng(lat, lng),
-        }
-      );
+      fetchCoordinates("{{ place.pluscode }}")
+        .then(geoinfo => {places.push({position: new google.maps.LatLng(geoinfo.plus_code.geometry.location.lat, geoinfo.plus_code.geometry.location.lng)})
     {% endif %}
   {% endfor %}
 
