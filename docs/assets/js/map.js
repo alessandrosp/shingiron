@@ -2,7 +2,7 @@
 layout: blank
 ---
 let map;
-let icon = "https://developers.google.com/maps/documentation/javascript/examples/full/images/info-i_maps.png";
+let icon = "https://img.icons8.com/color/48/000000/romantic-place--v2.png";
 let url = "https://plus.codes/api?address=${pluscode}&key=AIzaSyAsVncbPDu6sjkwL6pXhj1LN2GD6QtcgMY";
 
 function initMap() {
