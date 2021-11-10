@@ -12,8 +12,12 @@ img {
 }
 
 .list-subgroup {
+  list-style: none;
   margin-bottom: 12px;
   margin-top: 4px;
+}
+
+.list-subgroup-item {
 }
 
 #map {
