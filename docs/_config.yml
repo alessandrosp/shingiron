@@ -2,6 +2,6 @@ title: Shingiron
 url: http://shingiron.com/
 
 collections:
-  - places
-  - tags:
+  places:
+  tags:
     output: true
