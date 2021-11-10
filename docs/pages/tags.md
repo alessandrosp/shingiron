@@ -12,6 +12,6 @@ permalink: /tags/
       {% for child in children | where: "parent", parent.name %}
         <li>{{ child.name }}</li>
       {% endfor %}
-    <ul>
+    </ul>
   {% endfor %}
 </ul>
