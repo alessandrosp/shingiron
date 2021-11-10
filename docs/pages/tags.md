@@ -7,10 +7,10 @@ permalink: /tags/
   {% assign parents = site.tags | where: "parent", "None" | sort %}
   {% for parent in parents %}
     <li class="list-group-item">{{ parent.name }}</li>
-    <ul class="list-group list-group-flush">
+    <ul class="list-subgroup">
       {% assign children = site.tags | where: "parent", parent.name | sort %}
       {% for child in children %}
-        <li class="list-group-item">{{ child.name }} <span class="badge bg-primary rounded-pill">14</span></li>
+        <li class="list-subgroup-item">{{ child.name }} <span class="badge bg-primary rounded-pill">14</span></li>
       {% endfor %}
     </ul>
   {% endfor %}
