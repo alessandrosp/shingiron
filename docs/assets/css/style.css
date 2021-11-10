@@ -11,6 +11,11 @@ img {
   max-width: 100%;
 }
 
+.list-subgroup {
+  margin-bottom: 12px;
+  margin-top: 4px;
+}
+
 #map {
   height: 80vh;
 }
