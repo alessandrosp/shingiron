@@ -1,5 +1,5 @@
 ---
 name: Pizza
-parent: Foos
+parent: Food
 emoji: 🍕
 ---
