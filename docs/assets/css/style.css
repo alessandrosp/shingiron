@@ -64,11 +64,11 @@ img {
 }
 
 .place-review-content-3 {
-  border-left: #198754 solid 6px;
+  border-left: var(--green) solid 6px;
 }
 
 .place-review-content-4 {
-  border-left: var(--green) solid 6px;
+  border-left: #6f42c1 solid 6px;
 }
 
 .place-review-blockquote {
