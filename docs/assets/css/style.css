@@ -1,3 +1,7 @@
+:root {
+  --green: #34A853;
+}
+
 .blockquote {
   font-size: 0.99rem; 
 }
@@ -64,7 +68,7 @@ img {
 }
 
 .place-review-content-4 {
-  border-left: #6f42c1 solid 6px;
+  border-left: var(--green) solid 6px;
 }
 
 .place-review-blockquote {
