@@ -3,4 +3,5 @@ url: http://shingiron.com/
 
 collections:
   - places
-  - tags
+  - tags:
+    output: true
