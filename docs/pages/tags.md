@@ -10,7 +10,7 @@ permalink: /tags/
     <li class="list-group-item"><b>{{ parent.name }}</b> <span class="badge bg-primary rounded-pill">{{ children.size }} TAGS</span></li>
     <ul class="list-subgroup">
       {% for child in children %}
-        <li class="list-subgroup-item">{{ child.name }}</li>
+        <li class="list-subgroup-item">{{ child.name }} {{ child.emoji }}</li>
       {% endfor %}
     </ul>
   {% endfor %}
