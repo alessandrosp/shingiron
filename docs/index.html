@@ -13,7 +13,7 @@ layout: default
         <div class="col">
           {% for label in place.labels %}
             {% assign tag = site.tags | where: "name", label | first %}
-            <a href="{{ staff_member.url }}"><span class="place-tag badge rounded-pill bg-primary">{{ tag.name }} {{ tag.emoji }}</span></a>
+            <a href="{{ tag.url }}"><span class="place-tag badge rounded-pill bg-primary">{{ tag.name }} {{ tag.emoji }}</span></a>
           {% endfor %}
         </div>
       </div>
