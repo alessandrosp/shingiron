@@ -6,11 +6,11 @@ permalink: /tags/
 <ul class="list-group list-group-flush">
   {% assign parents = site.tags | where: "parent", "None" | sort %}
   {% for parent in parents %}
-    <li class="list-group-item"><b>{{ parent.name }}</b></li>
+    {% assign children = site.tags | where: "parent", parent.name | sort %}
+    <li class="list-group-item"><b>{{ parent.name }}</b> <span class="badge bg-primary rounded-pill">{{ children.size }} TAGS</span></li>
     <ul class="list-subgroup">
-      {% assign children = site.tags | where: "parent", parent.name | sort %}
       {% for child in children %}
-        <li class="list-subgroup-item">{{ child.name }} <span class="badge bg-primary rounded-pill">14</span></li>
+        <li class="list-subgroup-item">{{ child.name }}</li>
       {% endfor %}
     </ul>
   {% endfor %}
