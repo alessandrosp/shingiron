@@ -6,7 +6,7 @@ permalink: /tags/
 <ul class="list-group list-group-flush">
   {% assign parents = site.tags | where: "parent", "None" | sort %}
   {% for parent in parents %}
-    <li class="list-group-item">{{ parent.name }}</li>
+    <li class="list-group-item"><b>{{ parent.name }}</b></li>
     <ul class="list-subgroup">
       {% assign children = site.tags | where: "parent", parent.name | sort %}
       {% for child in children %}
