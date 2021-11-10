@@ -4,7 +4,8 @@ permalink: /tags/
 ---
 # Tags
 <ul>
-  {% for parent in site.tags | where: "parent", "None" %}
+  {% assign parents = site.tags | where: "parent", "None" %}
+  {% for parent in parents %}
     <li>{{ parent.name }}</li>
   {% endfor %}
 </ul>
