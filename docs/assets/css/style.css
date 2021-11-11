@@ -1,5 +1,7 @@
 :root {
   --green: #34A853;
+  --blue: ##4285F4;
+  --dark-blue: #0D6EFD;
 }
 
 .blockquote {
@@ -77,6 +79,14 @@ img {
 
 .place-reviews {
   margin-bottom: 12px; 
+}
+
+.place-tag {
+  background-color: var(--blue) !important;
+}
+
+.place-tag:hover {
+  background-color: var(--dark-blue) !important;
 }
 
 .sidebar {
