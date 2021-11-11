@@ -5,3 +5,4 @@ collections:
   places:
   tags:
     output: true
+    permalink: /tag/:name
