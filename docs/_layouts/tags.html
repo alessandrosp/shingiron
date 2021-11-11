@@ -4,7 +4,7 @@ layout: default
 {% assign filtered_places = "" | split: "," %}
 {% assign sorted_places = site.places | sort: "created" | reverse %}
 {% for place in sorted_places %}
-  {% if place contains "{{ page.name }}" %}
+  {% if place.name contains "Ben" %}
     {% assign filtered_places = filtered_places | push: place %}
   {% endif %}
 {% endfor %}
