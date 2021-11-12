@@ -1,1 +1,12 @@
-
+---
+layout: default
+---
+{{ content }}
+{% assign filtered_places = "" | split: "," %}
+{% assign sorted_places = site.places | sort: "created" | reverse %}
+{% for place in sorted_places %}
+  {% if place.area == page.name %}
+    {% assign filtered_places = filtered_places | push: place %}
+  {% endif %}
+{% endfor %}
+{% include reviews_list.html reviews=filtered_places %}
