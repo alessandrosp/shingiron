@@ -2,6 +2,9 @@ title: Shingiron
 url: http://shingiron.com/
 
 collections:
+  area:
+    output: true
+    permalink: /area/:name/
   places:
   tags:
     output: true
