@@ -95,5 +95,9 @@ img {
   background-color: var(--dark-blue) !important;
 }
 
+.pre-reviews-header {
+  margin-bottom: 24px;
+}
+
 .sidebar {
 }
