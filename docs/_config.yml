@@ -2,7 +2,7 @@ title: Shingiron
 url: http://shingiron.com/
 
 collections:
-  area:
+  areas:
     output: true
     permalink: /area/:name/
   places:
