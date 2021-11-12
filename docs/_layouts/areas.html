@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-{{ content | markdownify }}
+{% if content %}
+  <h1 class="display-3">{{ page.name }}</h1>
+  {{ content | markdownify }}
+{% endif %}
 {% if page.gquery %}
   <iframe
     id="area-map"
@@ -11,7 +14,7 @@ layout: default
   </iframe>
 {% endif %}
 
-<h1>Reviews</h1>
+<h1 id="pre-reviews-header">Reviews</h1>
 {% assign filtered_places = "" | split: "," %}
 {% assign sorted_places = site.places | sort: "created" | reverse %}
 {% for place in sorted_places %}
