@@ -4,6 +4,11 @@
   --dark-blue: #0B63E3;
 }
 
+#area-map {
+  width: 100%;
+  min-height: 600px;
+}
+
 .blockquote {
   font-size: 0.99rem; 
 }
