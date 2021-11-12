@@ -19,7 +19,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <img class="place-icon" src="https://img.icons8.com/color/48/000000/home.png"/> {{ place.area }}, {{ place.city }}
+          {% assign area = site.area | where: "name", place.area | first %}
+          <img class="place-icon" src="https://img.icons8.com/color/48/000000/home.png"/> {% if place.gmaps %} <a href="{{ area.url }}">{{ place.area }}</a> {% else %} {{ place.area }} {% endif %}, {{ place.city }}
         </div>
       </div>
       {% if place.instagram %}
