@@ -3,14 +3,14 @@ layout: default
 ---
 {{ content | markdownify }}
 {% if page.gquery %}
-<iframe
-  width="600"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDx3pE_t6DwHcdC8Hdga0dTSHWNeqPA5cI&q={{ page.gquery }}">
-</iframe>
+  <iframe
+    width="600"
+    height="450"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDx3pE_t6DwHcdC8Hdga0dTSHWNeqPA5cI&q={{ page.gquery }}">
+  </iframe>
 {% endif %}
 
 <h1>Reviews</h1>
