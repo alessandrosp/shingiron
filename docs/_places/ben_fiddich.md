@@ -4,7 +4,7 @@ japanese:
 area: Nishishinjuku
 city: Tokyo
 instagram: 
-gmaps: ben+Fiddich+tokyo
+gmaps: ben+fiddich+tokyo
 pluscode: MMQW+QJ Shinjuku City, Tokyo, Japan
 created: 2021-11-09
 labels:
