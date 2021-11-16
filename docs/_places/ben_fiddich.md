@@ -16,7 +16,7 @@ reviews:
     when: 2021-11-09
     verdict: 3
   - author: Lorenzo
-    content: "The door opened into a fantasy world: deers stare at you from the walls, rabbits step through windows, bramble obscures fellow adventurers. We sat next to Cloud, Tifa and Barrett, and ordered some Megalixirs. Sadly all we got were potions."
+    content: "The door opened into a fantasy world: deer stare at you from the walls, rabbits step through windows, bramble obscures fellow adventurers. We sat next to Cloud, Tifa and Barrett, and ordered some Megalixirs. Sadly all we got were potions."
     when: 2021-11-09
     verdict: 3
 ---
